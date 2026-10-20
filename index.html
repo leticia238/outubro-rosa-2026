@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outubro Rosa - Conscientização e Prevenção</title>
+    <!-- Tailwind CSS CDN para estilização rápida, bonita e moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para ícones decorativos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fonte Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configurações customizadas do Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosa: {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f472b6',
+                            400: '#e879f9',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animação suave de transição para cards e botões */
+        .transition-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .transition-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-rosa-50 font-sans text-gray-800 antialiased flex flex-col min-h-screen">
+
+    <!-- ==================== NAVEGAÇÃO ==================== -->
+    <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-rosa-100 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo / Título -->
+            <a href="#" class="flex items-center gap-2 text-rosa-600 font-bold text-xl hover:text-rosa-700 transition">
+                <i class="fa-solid fa-ribbon text-2xl"></i>
+                <span>Outubro Rosa</span>
+            </a>
+            
+            <!-- Links do Menu -->
+            <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+                <a href="#sobre" class="hover:text-rosa-600 transition">O que é</a>
+                <a href="#prevencao" class="hover:text-rosa-600 transition">Prevenção</a>
+                <a href="#lembrete" class="hover:text-rosa-600 transition">Lembrete de Exame</a>
+                <a href="#mitos-verdades" class="hover:text-rosa-600 transition">Mitos e Verdades</a>
+            </div>
+
+            <!-- Botão de Ação -->
+            <a href="#lembrete" class="bg-rosa-600 hover:bg-rosa-700 text-white px-4 py-2 rounded-full text-sm font-semibold transition shadow-md shadow-rosa-200">
+                Criar Lembrete
+            </a>
+        </div>
+    </nav>
+
+    <!-- ==================== CAVEÇALHO (HERO) ==================== -->
+    <header class="bg-gradient-to-b from-rosa-100 via-rosa-50 to-rosa-50 py-16 md:py-24 text-center px-4 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <!-- Ícone do Laço Rosa -->
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-rosa-200 text-rosa-600 rounded-full mb-6 shadow-inner animate-pulse">
+                <i class="fa-solid fa-ribbon text-4xl"></i>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-4">
+                Se Cuide, Se Ame, <span class="text-rosa-600">Se Previna</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                O diagnóstico precoce é o passo mais importante para a cura do câncer de mama. Cuide de você e incentive as mulheres que você ama.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#prevencao" class="bg-rosa-600 hover:bg-rosa-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg shadow-rosa-300 transition">
+                    Como se prevenir?
+                </a>
+                <a href="#lembrete" class="bg-white hover:bg-rosa-50 text-rosa-600 border border-rosa-200 font-semibold px-6 py-3 rounded-xl shadow-sm transition">
+                    Simular Próximo Exame
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== O QUE É O OUTUBRO ROSA ==================== -->
+    <section id="sobre" class="py-12 bg-white border-y border-rosa-100">
+        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <span class="text-rosa-600 font-bold text-sm tracking-wider uppercase bg-rosa-100 px-3 py-1 rounded-full">
+                    Conscientização Global
+                </span>
+                <h2 class="text-3xl font-bold text-gray-900">O que é a campanha Outubro Rosa?</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    O <strong>Outubro Rosa</strong> é um movimento internacional de conscientização para o controle do câncer de mama e, mais recentemente, do câncer de colo do útero. Criado no início da década de 1990, o movimento visa compartilhar informações e promover a conscientização sobre as doenças.
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    A campanha busca proporcionar maior acesso aos serviços de diagnóstico e de tratamento e contribuir para a redução da mortalidade.
+                </p>
+            </div>
+            <div class="bg-rosa-50 p-8 rounded-2xl border border-rosa-200 text-center">
+                <div class="text-5xl font-extrabold text-rosa-600 mb-2">95%</div>
+                <div class="text-xl font-bold text-gray-800 mb-2">de chance de cura</div>
+                <p class="text-gray-600 text-sm">
+                    Quando o câncer de mama é detectado precocemente em suas fases iniciais, as chances de tratamento bem-sucedido aumentam drasticamente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PREVENÇÃO E DIAGNÓSTICO PRECOCE ==================== -->
+    <section id="prevencao" class="py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Prevenção e Diagnóstico Precoce</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Pequenos hábitos diários e a atenção ao próprio corpo fazem toda a diferença na saúde feminina.</p>
+            </div>
+
+            <!-- Cards de Prevenção -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl border border-rosa-100 shadow-sm transition-card flex flex-col items-start">
+                    <div class="w-12 h-12 bg-rosa-100 text-rosa-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">1. Autoexame das Mamas</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Conheça o seu corpo. Toque suas mamas no banho ou ao se trocar para identificar possíveis nódulos, alterações na pele ou secreções.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl border border-rosa-100 shadow-sm transition-card flex flex-col items-start">
+                    <div class="w-12 h-12 bg-rosa-100 text-rosa-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hospital-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">2. Mamografia Periódica</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Recomendada anualmente para mulheres a partir dos 40 ou 50 anos (conforme orientação médica) ou antes, caso haja histórico familiar.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl border border-rosa-100 shadow-sm transition-card flex flex-col items-start">
+                    <div class="w-12 h-12 bg-rosa-100 text-rosa-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">3. Hábitos Saudáveis</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Pratique atividades físicas regularmente, mantenha uma alimentação equilibrada, evite o consumo exagerado de álcool e não fume.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FERRAMENTA INTERATIVA: CALCULADORA / LEMBRETE ==================== -->
+    <section id="lembrete" class="py-16 bg-white border-y border-rosa-100">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="text-rosa-600 font-bold text-sm tracking-wider uppercase bg-rosa-100 px-3 py-1 rounded-full">
+                    Ferramenta Interativa
+                </span>
+                <h2 class="text-3xl font-bold text-gray-900 mt-3 mb-2">Calculadora de Próximo Exame</h2>
+                <p class="text-gray-600">Insira a data da sua última consulta/exame para calcular quando deverá realizar o próximo acompanhamento.</p>
+            </div>
+
+            <!-- Formulário do Lembrete -->
+            <div class="bg-rosa-50 p-6 md:p-8 rounded-3xl border border-rosa-200 shadow-sm max-w-xl mx-auto">
+                <form id="form-lembrete" class="space-y-4" onsubmit="calcularProximoExame(event)">
+                    <div>
+                        <label for="nome" class="block text-sm font-semibold text-gray-700 mb-1">Seu Nome:</label>
+                        <input type="text" id="nome" required placeholder="Ex: Maria Silva" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-rosa-500 focus:border-rosa-500 outline-none transition">
+                    </div>
+
+                    <div>
+                        <label for="data-exame" class="block text-sm font-semibold text-gray-700 mb-1">Data do Último Exame / Autoexame:</label>
+                        <input type="date" id="data-exame" required class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-rosa-500 focus:border-rosa-500 outline-none transition">
+                    </div>
+
+                    <button type="submit" class="w-full bg-rosa-600 hover:bg-rosa-700 text-white font-bold py-3 px-6 rounded-xl shadow-md transition">
+                        Calcular Próxima Data
+                    </button>
+                </form>
+
+                <!-- Resultado em JS -->
+                <div id="resultado-lembrete" class="hidden mt-6 p-4 bg-white rounded-2xl border border-rosa-200 text-center animate-fade-in">
+                    <i class="fa-solid fa-calendar-check text-3xl text-rosa-600 mb-2"></i>
+                    <h3 id="resultado-titulo" class="font-bold text-gray-900 text-lg"></h3>
+                    <p id="resultado-mensagem" class="text-gray-600 text-sm mt-1"></p>
+                    <div class="mt-4 p-3 bg-rosa-100 rounded-xl text-rosa-800 text-xs font-semibold">
+                        💡 Dica: Salve essa data no calendário do seu celular para não esquecer!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== QUIZ INTERATIVO: MITOS E VERDADES ==================== -->
+    <section id="mitos-verdades" class="py-16">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">Mitos e Verdades</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Clique nos cards abaixo para descobrir se a afirmação é verdadeira ou apenas um mito popular.</p>
+            </div>
+
+            <!-- Grid de Cards do Quiz -->
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- Card 1 -->
+                <div onclick="revelarResposta('card-1')" class="cursor-pointer bg-white p-6 rounded-2xl border border-rosa-200 shadow-sm transition-card flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-rosa-600 bg-rosa-100 px-2.5 py-1 rounded-full uppercase">Pergunta 1</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-3 mb-2">"Homens também podem ter câncer de mama?"</h3>
+                        <p class="text-xs text-gray-400">Clique para ver a resposta...</p>
+                    </div>
+
+                    <!-- Resposta Escondida -->
+                    <div id="card-1" class="hidden mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-block font-bold text-green-600 text-sm bg-green-50 px-2.5 py-1 rounded-md mb-1">VERDADE!</span>
+                        <p class="text-sm text-gray-600">Embora seja raro (cerca de 1% dos casos), os homens possuem tecido mamário e também podem desenvolver a doença.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div onclick="revelarResposta('card-2')" class="cursor-pointer bg-white p-6 rounded-2xl border border-rosa-200 shadow-sm transition-card flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-rosa-600 bg-rosa-100 px-2.5 py-1 rounded-full uppercase">Pergunta 2</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-3 mb-2">"Encontrar um caroço no peito é sempre sinal de câncer?"</h3>
+                        <p class="text-xs text-gray-400">Clique para ver a resposta...</p>
+                    </div>
+
+                    <!-- Resposta Escondida -->
+                    <div id="card-2" class="hidden mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-block font-bold text-red-600 text-sm bg-red-50 px-2.5 py-1 rounded-md mb-1">MITO!</span>
+                        <p class="text-sm text-gray-600">A maioria dos nódulos mamários são benignos (como cistos ou fibroadenomas). Porém, qualquer alteração deve ser investigada por um médico.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div onclick="revelarResposta('card-3')" class="cursor-pointer bg-white p-6 rounded-2xl border border-rosa-200 shadow-sm transition-card flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-rosa-600 bg-rosa-100 px-2.5 py-1 rounded-full uppercase">Pergunta 3</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-3 mb-2">"Praticar exercícios reduz o risco de câncer de mama?"</h3>
+                        <p class="text-xs text-gray-400">Clique para ver a resposta...</p>
+                    </div>
+
+                    <!-- Resposta Escondida -->
+                    <div id="card-3" class="hidden mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-block font-bold text-green-600 text-sm bg-green-50 px-2.5 py-1 rounded-md mb-1">VERDADE!</span>
+                        <p class="text-sm text-gray-600">A prática regular de atividades físicas ajuda a equilibrar os níveis hormonais e o peso corporal, reduzindo os riscos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div onclick="revelarResposta('card-4')" class="cursor-pointer bg-white p-6 rounded-2xl border border-rosa-200 shadow-sm transition-card flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs font-bold text-rosa-600 bg-rosa-100 px-2.5 py-1 rounded-full uppercase">Pergunta 4</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-3 mb-2">"O autoexame substitui a mamografia?"</h3>
+                        <p class="text-xs text-gray-400">Clique para ver a resposta...</p>
+                    </div>
+
+                    <!-- Resposta Escondida -->
+                    <div id="card-4" class="hidden mt-4 pt-4 border-t border-gray-100">
+                        <span class="inline-block font-bold text-red-600 text-sm bg-red-50 px-2.5 py-1 rounded-md mb-1">MITO!</span>
+                        <p class="text-sm text-gray-600">O autoexame ajuda no autoconhecimento, mas a mamografia é capaz de identificar lesões muito pequenas, antes mesmo que possam ser apalpadas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RODAPÉ (FOOTER) ==================== -->
+    <footer class="bg-gray-900 text-white mt-auto py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center space-y-6">
+            <div class="flex justify-center items-center gap-2 text-rosa-400 font-bold text-2xl">
+                <i class="fa-solid fa-ribbon"></i>
+                <span>Outubro Rosa</span>
+            </div>
+
+            <p class="text-gray-400 text-sm max-w-md mx-auto">
+                Este site é uma iniciativa informativa de conscientização. Consulte sempre um médico ou profissional de saúde para exames e orientações.
+            </p>
+
+            <div class="border-t border-gray-800 pt-6 text-xs text-gray-500">
+                <p>Juntos na luta contra o câncer de mama. Apoie esta causa!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        /**
+         * Função para calcular o próximo exame com base na data inserida pelo usuário.
+         * Adiciona 1 ano (365 dias) à data informada.
+         */
+        function calcularProximoExame(event) {
+            // Evita o recarregamento da página ao enviar o formulário
+            event.preventDefault();
+
+            // Obter os valores dos campos
+            const nome = document.getElementById('nome').value;
+            const dataInput = document.getElementById('data-exame').value;
+
+            if (!dataInput) return;
+
+            // Converter a string da data para um objeto Date do JS
+            const dataUltimo = new Date(dataInput);
+            
+            // Adiciona 1 ano (365 dias) à data informada
+            const dataProximo = new Date(dataUltimo);
+            dataProximo.setFullYear(dataProximo.getFullYear() + 1);
+
+            // Formata a data para o padrão brasileiro (DD/MM/AAAA)
+            const dataFormatada = dataProximo.toLocaleDateString('pt-BR', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+
+            // Exibe os elementos na tela
+            const divResultado = document.getElementById('resultado-lembrete');
+            const titulo = document.getElementById('resultado-titulo');
+            const mensagem = document.getElementById('resultado-mensagem');
+
+            titulo.innerText = `Olá, ${nome}!`;
+            mensagem.innerHTML = `Sua próxima consulta ou autoexame preventiva é recomendada para até: <br><strong class="text-rosa-600 text-lg">${dataFormatada}</strong>`;
+
+            divResultado.classList.remove('hidden');
+        }
+
+        /**
+         * Função para alternar a exibição da resposta nos cards de Mito ou Verdade.
+         */
+        function revelarResposta(idCard) {
+            const elementoResposta = document.getElementById(idCard);
+            
+            // Se estiver escondido, mostra; se estiver visível, esconde.
+            if (elementoResposta.classList.contains('hidden')) {
+                elementoResposta.classList.remove('hidden');
+            } else {
+                elementoResposta.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
